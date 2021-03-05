@@ -10,6 +10,7 @@ Server.route({
     path: '/hello/{user}',
     handler: function (request, reply) {
 
+        console.log("hello from " + request.params.user);
         const result = Hello(decodeURIComponent(request.params.user));
         reply(result);
     }
